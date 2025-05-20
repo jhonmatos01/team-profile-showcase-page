@@ -14,12 +14,12 @@ const AboutProject: React.FC<AboutProjectProps> = ({ description, technologies }
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-xl font-semibold mb-4">Objetivo</h3>
-          <p className="text-gray-700 mb-6">{description}</p>
+          <p className="text-gray-700 mb-6" style={{lineHeight: '1.6'}}>{description}</p>
           
           <h3 className="text-xl font-semibold mb-4">Tecnologias Utilizadas</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
+          <ul className="list-disc list-inside text-gray-700 space-y-1" style={{marginLeft: '20px'}}>
             {technologies.map((tech, index) => (
-              <li key={index}>{tech}</li>
+              <li key={index} style={{marginBottom: '5px'}}>{tech}</li>
             ))}
           </ul>
         </div>

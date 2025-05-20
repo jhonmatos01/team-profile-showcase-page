@@ -18,25 +18,25 @@ const TasksTable: React.FC<TasksTableProps> = ({ tasks }) => {
         <h2 className="text-2xl font-bold mb-10 text-center">Tarefas dos Integrantes</h2>
         
         <div className="overflow-x-auto">
-          <table>
+          <table style={{width: '100%', borderCollapse: 'collapse'}}>
             <thead>
               <tr>
-                <th>Nome</th>
-                <th>RU</th>
-                <th>Tarefa</th>
+                <th style={{border: '1px solid #ddd', padding: '8px 12px', textAlign: 'left', backgroundColor: '#f0f4f8', fontWeight: '600'}}>Nome</th>
+                <th style={{border: '1px solid #ddd', padding: '8px 12px', textAlign: 'left', backgroundColor: '#f0f4f8', fontWeight: '600'}}>RU</th>
+                <th style={{border: '1px solid #ddd', padding: '8px 12px', textAlign: 'left', backgroundColor: '#f0f4f8', fontWeight: '600'}}>Tarefa</th>
               </tr>
             </thead>
             <tbody>
               {tasks.map((person, index) => (
                 person.tasks.map((task, taskIndex) => (
-                  <tr key={`${index}-${taskIndex}`}>
+                  <tr key={`${index}-${taskIndex}`} style={{backgroundColor: taskIndex % 2 === 1 ? '#f9f9f9' : 'transparent'}}>
                     {taskIndex === 0 ? (
                       <>
-                        <td rowSpan={person.tasks.length}>{person.name}</td>
-                        <td rowSpan={person.tasks.length}>{person.ru}</td>
+                        <td rowSpan={person.tasks.length} style={{border: '1px solid #ddd', padding: '8px 12px', textAlign: 'left'}}>{person.name}</td>
+                        <td rowSpan={person.tasks.length} style={{border: '1px solid #ddd', padding: '8px 12px', textAlign: 'left'}}>{person.ru}</td>
                       </>
                     ) : null}
-                    <td>{task}</td>
+                    <td style={{border: '1px solid #ddd', padding: '8px 12px', textAlign: 'left'}}>{task}</td>
                   </tr>
                 ))
               ))}
