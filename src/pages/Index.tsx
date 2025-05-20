@@ -13,9 +13,9 @@ const Index = () => {
       name: "Jonathas Almeida de Matos",
       role: "Desenvolvedor Full-Stack",
       description: "Especialista em desenvolvimento web com interesse em novas tecnologias e solução de problemas complexos.",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=150&h=150",
-      github: "https://github.com/jonathas",
-      linkedin: "https://linkedin.com/in/jonathas"
+      image: "/lovable-uploads/42c8607b-ade3-473a-a9b3-56fcfa1d1865.png",
+      github: "https://github.com/jhonmatos01",
+      linkedin: "https://www.linkedin.com/in/jonathas-almeida-657285139"
     }
   ];
 
